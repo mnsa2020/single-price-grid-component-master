@@ -1,0 +1,133 @@
+@use "variables" as v;
+@use "global";
+
+// Main
+main {
+  .container {
+    width: 670px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    .join {
+      padding: 40px;
+      background: white;
+      border-radius: 10px 10px 0 0;
+      grid-row: 1;
+      grid-column: 1 / span 3;
+      h2 {
+        color: v.$Cyan;
+        margin-bottom: 25px;
+      }
+      h3 {
+        color: v.$BrightYellow;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+      p {
+        line-height: 1.5;
+      }
+    }
+    .subscription {
+      border-radius: 0 0 0 10px;
+      padding: 40px;
+      background: v.$Cyan;
+      color: v.$LightGray;
+      h4 {
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+      p.price {
+        font-weight: 700;
+        font-size: 30px;
+        letter-spacing: 1px;
+        align-items: center;
+        display: inline;
+      }
+      small {
+        font-size: 14px;
+        margin-left: 10px;
+      }
+      p {
+        margin-top: 15px;
+        margin-bottom: 30px;
+      }
+      a.btn {
+        text-decoration: none;
+        color: v.$LightGray;
+        background: v.$BrightYellow;
+        padding: 15px;
+        display: block;
+        text-align: center;
+      }
+    }
+    .why-us {
+      border-radius: 0 0 10px 0;
+      padding: 40px;
+      background: lighten($color: v.$Cyan, $amount: 5);
+      color: v.$LightGray;
+      h4 {
+        margin-bottom: 18px;
+      }
+      p {
+        font-size: 15px;
+        line-height: 1.4;
+        word-spacing: 1px;
+        width: 80%;
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    height: fit-content;
+    .container {
+      width: 100%;
+      grid-template-columns: 1fr;
+      .join {
+        border-radius: unset;
+        grid-row: 1;
+        grid-column: 1;
+        h2 {
+          font-size: 20px;
+          word-spacing: -1px;
+        }
+        h3 {
+          color: v.$BrightYellow;
+          font-size: 15px;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.8;
+        }
+      }
+      .subscription {
+        border-radius: unset;
+        grid-row: 2;
+        grid-column: 1;
+        padding-block: 20px;
+
+        a.btn {
+          grid-row: 3;
+          grid-column: 1;
+        }
+      }
+      .why-us {
+        border-radius: unset;
+        padding-block: 20px;
+        background: lighten($color: v.$Cyan, $amount: 5);
+        color: v.$LightGray;
+      }
+    }
+  }
+}
+// Main
+
+// Footer
+.attribution {
+  padding: 2em;
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+// Footer

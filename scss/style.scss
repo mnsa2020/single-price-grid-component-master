@@ -25,6 +25,7 @@ main {
       }
       p {
         line-height: 1.5;
+        color: lighten($color: v.$Cyan, $amount: 10);
       }
     }
     .subscription {

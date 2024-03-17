@@ -44,6 +44,7 @@ main .container .join h3 {
 }
 main .container .join p {
   line-height: 1.5;
+  color: #3dd1cf;
 }
 main .container .subscription {
   border-radius: 0 0 0 10px;
